@@ -27,3 +27,7 @@ function unwrap() {
   var body = document.getElementById("body");
   body.removeChild(document.getElementById("unwrap-button"));
 }
+
+document.addEventListener('DOMContentLoaded', function() {
+  console.log("Fully loaded");
+})

@@ -13,7 +13,7 @@ const html = `
       <link rel="stylesheet" href="static/css/styles.css">
     </head>
     <body id="body">
-      <script src="static/unwrap-button.js"></script>
+      <script src="static/src.js"></script>
       <img src="static/top-left.jpg" id="top-left" class="absolute top-image left-image" />
       <img src="static/top-right.jpg" id="top-right" class="absolute top-image right-image" />
       <img src="static/bottom-left.jpg" id="bottom-left" class="absolute bottom-image left-image" />
