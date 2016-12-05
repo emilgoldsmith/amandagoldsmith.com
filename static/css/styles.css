@@ -1,4 +1,31 @@
-#background-gift {
-  width: 100vw;
-  height: 100vh;
+#top-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 22.6953125vw;
+  height: 20.4166666vh;
+}
+
+#top-right {
+  position: absolute;
+  left: 22.6753125vw;
+  top: 0;
+  width: 77.3046875vw;
+  height: 20.4166666vh;
+}
+
+#bottom-left {
+  position: absolute;
+  left: 0;
+  top: 20.4166666vh;
+  width: 22.6953125vw;
+  height: 79.5833333vh;
+}
+
+#bottom-right {
+  position: absolute;
+  left: 22.6753125vw;
+  top: 20.4166666vh;
+  width: 77.3046875vw;
+  height: 79.5833333vh;
 }

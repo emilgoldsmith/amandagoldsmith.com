@@ -16,7 +16,7 @@ const html = `
       <img src="static/top-left.jpg" id="top-left" />
       <img src="static/top-right.jpg" id="top-right" />
       <img src="static/bottom-left.jpg" id="bottom-left" />
-      <img src="static/bottom-right.jpg" id="top-left" />
+      <img src="static/bottom-right.jpg" id="bottom-right" />
     </body>
   </html>`
 
