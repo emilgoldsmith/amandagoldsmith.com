@@ -1,31 +1,110 @@
-#top-left {
+/* Background gift CSS */
+
+.absolute {
   position: absolute;
-  left: 0;
-  top: 0;
-  width: 22.6953125vw;
-  height: 20.4166666vh;
 }
 
-#top-right {
-  position: absolute;
-  left: 22.6753125vw;
-  top: 0;
+.left-image {
+  left: 0;
+  width: 22.6953125vw;
+}
+
+.right-image {
+  left: 22.6053125vw;
   width: 77.3046875vw;
-  height: 20.4166666vh;
 }
 
-#bottom-left {
-  position: absolute;
-  left: 0;
+.bottom-image {
   top: 20.4166666vh;
-  width: 22.6953125vw;
   height: 79.5833333vh;
 }
 
-#bottom-right {
-  position: absolute;
-  left: 22.6753125vw;
-  top: 20.4166666vh;
-  width: 77.3046875vw;
-  height: 79.5833333vh;
+.top-image {
+  top: 0;
+  height: 20.416666666vh;
+}
+
+/* Unwrapping animation */
+
+.unwrap {
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+
+@keyframes unwrap-bottom-right {
+  from {
+    top: 20.4166666vh;
+    left: 22.6053125vw;
+  }
+  to {
+    top: 100vh;
+    left: 100vw;
+  }
+}
+
+.unwrap-bottom-right {
+  animation-name: unwrap-bottom-right;
+}
+
+@keyframes unwrap-top-right {
+  from {
+    top: 0;
+    left: 22.6053125vw;
+  }
+  to {
+    top: -20.4166666vh;
+    left: 100vw;
+  }
+}
+
+.unwrap-top-right {
+  animation-name: unwrap-top-right;
+}
+
+@keyframes unwrap-bottom-left {
+  from {
+    top: 20.4166666vh;
+    left: 0;
+  }
+  to {
+    top: 100vh;
+    left: -22.6053125vw;
+  }
+}
+
+.unwrap-bottom-left {
+  animation-name: unwrap-bottom-left;
+}
+
+@keyframes unwrap-top-left {
+  from {
+    top: 0;
+    left: 0;
+  }
+  to {
+    top: -20.4166666vh;
+    left: -22.6053125vw;
+  }
+}
+
+.unwrap-top-left {
+  animation-name: unwrap-top-left;
+}
+
+/* unwrap button */
+.unwrap-button {
+    top: 15.4166666vh;
+    left: 17.6053125vw;
+    width: 10vw;
+    height: 10vh;
+    border: none;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+}
+
+/* Body */
+#body {
+  text-align: center;
+  vertical-align: middle;
 }

@@ -12,13 +12,16 @@ const html = `
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" href="static/css/styles.css">
     </head>
-    <body>
-      <img src="static/top-left.jpg" id="top-left" />
-      <img src="static/top-right.jpg" id="top-right" />
-      <img src="static/bottom-left.jpg" id="bottom-left" />
-      <img src="static/bottom-right.jpg" id="bottom-right" />
+    <body id="body">
+      <script src="static/unwrap-button.js"></script>
+      <img src="static/top-left.jpg" id="top-left" class="absolute top-image left-image" />
+      <img src="static/top-right.jpg" id="top-right" class="absolute top-image right-image" />
+      <img src="static/bottom-left.jpg" id="bottom-left" class="absolute bottom-image left-image" />
+      <img src="static/bottom-right.jpg" id="bottom-right" class="absolute bottom-image right-image" />
+      <button class="absolute unwrap-button" id="unwrap-button" onclick="unwrap()">Click Me!</button>
+      Merry Christmas!
     </body>
-  </html>`
+  </html>`;
 
 app.use('/static', express.static('static'))
 
