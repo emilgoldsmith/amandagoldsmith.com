@@ -1,0 +1,22 @@
+{
+  "name": "amandagoldsmith.com",
+  "version": "1.0.0",
+  "description": "Amanda's Christmas present",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/emilgoldsmith/amandagoldsmith.com.git"
+  },
+  "author": "Emil Goldsmith Olesen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/emilgoldsmith/amandagoldsmith.com/issues"
+  },
+  "homepage": "https://github.com/emilgoldsmith/amandagoldsmith.com#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
