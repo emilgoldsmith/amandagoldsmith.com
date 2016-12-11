@@ -29,6 +29,7 @@
 .unwrap {
   animation-duration: 4s;
   animation-timing-function: linear;
+  animation-fill-mode: forwards;
 }
 
 @keyframes unwrap-bottom-right {
@@ -104,7 +105,41 @@
 }
 
 /* Body */
-#body {
+/*#body {
   text-align: center;
   vertical-align: middle;
+}
+*/
+/* Loading screen */
+#loading-screen {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 5;
+  background-color: red;
+  transition: opacity 3s;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+#loading-icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+}
+
+@keyframes fly {
+  to {
+    transform: translate(200vw, -200vh);
+  }
+}
+
+.reindeer {
+  position: absolute;
+  animation: fly 9s linear infinite;
 }

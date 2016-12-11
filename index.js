@@ -9,7 +9,14 @@ const PORT = process.env.PORT || 3000;
 
 let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 // Insert name in title
-html = html.replace('##PREFERRED_NAME##', config.preferred_name);
+html = html.replace(/##PREFERRED_NAME##/g, config.preferred_name);
+// Insert reindeer svg as variable clientside
+const reindeer = fs.readFileSync(path.join(__dirname, 'static/reindeer.svg'), 'utf8');
+const body_match = /<body .*?>/.exec(html);
+const insert_index = body_match[0].length + body_match.index;
+html = html.substring(0, insert_index)
+  +'<script>"use strict";const reindeer=`'+reindeer+'`;</script>'
+  +html.substring(insert_index);
 
 app.use('/static', express.static('static'));
 
