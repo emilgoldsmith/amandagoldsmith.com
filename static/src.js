@@ -33,10 +33,18 @@ function unwrap() {
   body.removeChild(document.getElementById("unwrap-button"));
 }
 
+function removeLoad() {
+  const body = document.getElementById('body');
+  const loading_screen = document.getElementById('loading-screen');
+  body.removeChild(loading_screen);
+}
+
 window.addEventListener('load', function() {
   setTimeout(function() {
     const element = document.getElementById("loading-screen");
     element.classList.toggle("invisible");
+    element.addEventListener("transitionend", removeLoad);
+    element.addEventListener("webkitTransitionEnd", removeLoad)
   }, 3000)
 });
 
