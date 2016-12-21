@@ -1,4 +1,9 @@
 'use strict';
+// Record start of javascript
+const start = new Date().getTime();
+const MIN_LOADING_TIME = 20;
+const CYCLE_TIME = 1500;
+
 // Make loading object animate
 const dot_timers = [];
 function add_timer(id, interval, delay) {
@@ -11,7 +16,7 @@ function add_timer(id, interval, delay) {
     }.bind(null, id), interval));
   }, delay);
 }
-const CYCLE_TIME = 1500;
+
 add_timer("dot-1", CYCLE_TIME, 0*(CYCLE_TIME/6));
 add_timer("dot-2", CYCLE_TIME, 1*(CYCLE_TIME/6));
 add_timer("dot-3", CYCLE_TIME, 2*(CYCLE_TIME/6));
@@ -36,16 +41,30 @@ function unwrap() {
 function removeLoad() {
   const body = document.getElementById('body');
   const loading_screen = document.getElementById('loading-screen');
+  for (let i = 0; i < dot_timers.length; i++) {
+    clearTimeout(dot_timers[i]);
+  }
   body.removeChild(loading_screen);
 }
 
+function open_card() {
+  // Open christmas card
+  console.log("Opening");
+  const card = document.getElementById('card-front');
+  card.classList.add('open');
+}
+
 window.addEventListener('load', function() {
+  const currentTime = new Date().getTime();
+  const timeDiff = currentTime - start;
+  const waitBeforeRender = Math.max(MIN_LOADING_TIME-timeDiff, 0)
+  console.log("adding " + waitBeforeRender.toString() + "ms");
   setTimeout(function() {
     const element = document.getElementById("loading-screen");
     element.classList.toggle("invisible");
     element.addEventListener("transitionend", removeLoad);
     element.addEventListener("webkitTransitionEnd", removeLoad)
-  }, 3000)
+  }, waitBeforeRender)
 });
 
 const w = document.documentElement.clientWidth;
@@ -82,12 +101,14 @@ add_reindeer(155, 55);
 add_reindeer(170, 52);
 add_reindeer(185, 65);
 add_reindeer(200, 53);
-add_reindeer(92, 65);
-add_reindeer(95, 51);
-add_reindeer(50, 58);
-add_reindeer(85, 72);
-add_reindeer(64, 80);
+// add_reindeer(92, 65);
+// add_reindeer(95, 51);
+// add_reindeer(50, 58);
+// add_reindeer(85, 72);
+// add_reindeer(64, 80);
 
+add_reindeer(34, 3, true);
+add_reindeer(51, 12, true);
 add_reindeer(28, 43, true);
 add_reindeer(149, 39, true);
 add_reindeer(49, 40, true);

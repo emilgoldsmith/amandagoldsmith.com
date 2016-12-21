@@ -19,7 +19,15 @@
     <img src="static/top-right.jpg" id="top-right" class="absolute top-image right-image" />
     <img src="static/bottom-left.jpg" id="bottom-left" class="absolute bottom-image left-image" />
     <img src="static/bottom-right.jpg" id="bottom-right" class="absolute bottom-image right-image" />
-    <button class="absolute unwrap-button" id="unwrap-button" onclick="unwrap()">Click Me!</button>
+    <div class="container">
+      <div id="card-front" onclick="open_card()">
+        <img src="static/card.png" class="front" />
+        <div class="back"></div>
+      </div>
+      <div id="card-inside">
+        <button type="button" onclick="unwrap()">Unwrap me</button>
+      </div>
+    </div>
     Merry Christmas!
     <script src="static/src.js"></script>
   </body>
