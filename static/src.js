@@ -66,12 +66,12 @@ window.addEventListener('load', function() {
   const currentTime = new Date().getTime();
   const timeDiff = currentTime - start;
   const waitBeforeRender = Math.max(MIN_LOADING_TIME-timeDiff, 0)
-  console.log("adding " + waitBeforeRender.toString() + "ms");
   setTimeout(function() {
     const element = document.getElementById("loading-screen");
-    element.classList.toggle("invisible");
+    element.classList.add("invisible");
     element.addEventListener("transitionend", removeLoad);
-    element.addEventListener("webkitTransitionEnd", removeLoad)
+    element.addEventListener("webkitTransitionEnd", removeLoad);
+    element.classList.add("non-clickable");
   }, waitBeforeRender)
 });
 

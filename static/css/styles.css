@@ -156,7 +156,11 @@
   }
 }
 
-@keyframes unwrap-bottom-right {
+@keyframes unwrap
+.non-clickable {
+  pointer-events: none;
+}
+-bottom-right {
   from {
     top: 20.4166666vh;
     left: 22.6053125vw;
@@ -165,6 +169,10 @@
     top: 100vh;
     left: 100vw;
   }
+}
+
+.non-clickable {
+  pointer-events: none;
 }
 
 .unwrap-bottom-right {
@@ -324,4 +332,8 @@
   position: absolute;
   -webkit-animation: fly 9s linear infinite;
           animation: fly 9s linear infinite;
+}
+
+.non-clickable {
+  pointer-events: none;
 }
