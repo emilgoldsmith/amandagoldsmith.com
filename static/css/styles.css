@@ -1,3 +1,9 @@
+/* Adding font */
+@font-face {
+  font-family: 'Mightype Script';
+  src: url('static/mightype.otf');
+}
+
 /* Background gift CSS */
 
 .absolute {
