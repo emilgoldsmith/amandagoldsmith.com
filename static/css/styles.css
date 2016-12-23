@@ -28,12 +28,16 @@
   position: absolute;
   top: 18.416667vh;
   left: 19.605313vw;
-  width: 20vmin;
-  height: 26.26294563vmin;
+  width: 20vw;
+  height: 26.26294563vw;
   z-index: 3;
   transform: rotate(-13deg);
   transform-origin: left top;
-  transition: opacity 1s;
+  transition: opacity 1s, transform 2s;
+}
+
+.center-card {
+  transform: scale(2, 2) translate(14.8vw, 5vh);
 }
 
 .card {
@@ -94,8 +98,16 @@
   width: 70%;
   height: 60%;
   position: absolute;
-  top: 15%;
-  left: 20%;
+  top: 27%;
+  left: 15%;
+}
+
+#card-inside svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 27.24%;
 }
 
 

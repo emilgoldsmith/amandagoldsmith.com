@@ -12,9 +12,10 @@ let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 html = html.replace(/##PREFERRED_NAME##/g, config.preferred_name);
 
 const page1 = fs.readFileSync(path.join(__dirname, 'static/card page 1.svg'), 'utf8');
-
-// Insert svg for for card first page
+const page2 = fs.readFileSync(path.join(__dirname, 'static/card page 2.svg'), 'utf8');
+// Insert svg for for card
 html = html.replace('##CARD_PAGE_1##', page1);
+html = html.replace('##CARD_PAGE_2##', page2);
 
 // Insert reindeer svg as variable clientside
 const reindeer = fs.readFileSync(path.join(__dirname, 'static/reindeer.svg'), 'utf8');

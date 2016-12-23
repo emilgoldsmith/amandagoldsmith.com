@@ -56,9 +56,10 @@ function removeLoad() {
 
 function open_card() {
   // Open christmas card
-  console.log("Opening");
   const card = document.getElementById('card-front');
   card.classList.add('open');
+  const container = document.getElementById('card');
+  container.classList.add('center-card');
 }
 
 window.addEventListener('load', function() {
