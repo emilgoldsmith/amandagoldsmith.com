@@ -224,9 +224,9 @@
 }
 
 #loading-icon {
-  position: absolute;
-  text-align: center;
-  top: 50%;
+  margin: 0 auto;
+  position: relative;
+  top: 45%;
   font-size: 1.1em;
   font-family: sans-serif;
 }
