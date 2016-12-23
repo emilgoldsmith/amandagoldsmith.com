@@ -1,7 +1,7 @@
 'use strict';
 // Record start of javascript
 const start = new Date().getTime();
-const MIN_LOADING_TIME = 20;
+const MIN_LOADING_TIME = 3000;
 const CYCLE_TIME = 1500;
 
 // Make loading object animate
