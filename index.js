@@ -10,6 +10,12 @@ const PORT = process.env.PORT || 3000;
 let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
 // Insert name in title
 html = html.replace(/##PREFERRED_NAME##/g, config.preferred_name);
+
+const page1 = fs.readFileSync(path.join(__dirname, 'static/card page 1.svg'), 'utf8');
+
+// Insert svg for for card first page
+html = html.replace('##CARD_PAGE_1##', page1);
+
 // Insert reindeer svg as variable clientside
 const reindeer = fs.readFileSync(path.join(__dirname, 'static/reindeer.svg'), 'utf8');
 const body_match = /<body .*?>/.exec(html);

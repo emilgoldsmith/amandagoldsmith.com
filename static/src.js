@@ -24,6 +24,11 @@ add_timer("dot-3", CYCLE_TIME, 3*(CYCLE_TIME/6));
 add_timer("dot-2", CYCLE_TIME, 4*(CYCLE_TIME/6));
 add_timer("dot-1", CYCLE_TIME, 5*(CYCLE_TIME/6));
 
+function removeCard() {
+  const body = document.getElementById("body");
+  body.removeChild(document.getElementById("card"));
+}
+
 function unwrap() {
   const bottom_left = document.getElementById("bottom-left");
   const bottom_right = document.getElementById("bottom-right");
@@ -34,8 +39,10 @@ function unwrap() {
   top_right.className += " unwrap unwrap-top-right";
   top_left.className += " unwrap unwrap-top-left";
 
-  const body = document.getElementById("body");
-  body.removeChild(document.getElementById("unwrap-button"));
+  const card = document.getElementById("card");
+  card.classList.add("invisible");
+  card.addEventListener("transitionend", removeCard);
+  card.addEventListener("webkitTransitionEnd", removeCard)
 }
 
 function removeLoad() {
